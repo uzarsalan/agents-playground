@@ -10,6 +10,8 @@ COPY . ./
 # устанавливаем указанные зависимости NPM на этапе установки образа
 RUN npm install
 
+ENV NEXT_PUBLIC_LIVEKIT_URL "wss://test-app-mtzuxrmx.livekit.cloud"
+
 RUN npm run build
 
 # запускаем основной скрипт в момент запуска контейнера
